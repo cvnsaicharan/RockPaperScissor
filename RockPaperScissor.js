@@ -18,11 +18,11 @@ function getComputerChoice(){
     const choices = ['r','p','s'];
     const randomNumber = Math.floor(Math.random() * 3);
     if(randomNumber === 0)
-        document.getElementById("y").src="images/rock.png";
+        document.getElementById("y").src="rock.png";
     if(randomNumber === 1)
-        document.getElementById("y").src="images/paper.png";
+        document.getElementById("y").src="paper.png";
     if(randomNumber === 2)
-        document.getElementById("y").src="images/scissor.png";
+        document.getElementById("y").src="scissor.png";
     return choices[randomNumber];
 }
 
@@ -50,7 +50,7 @@ function game(userChoice){
         case "sp":
             win(userChoice, computerChoice);
             result_div.innerHTML = "<span style='color: white;font-size: 60px;'> YOU WON! </span>";
-            document.body.background = "images/party.gif"
+            document.body.background = "party.gif"
             setTimeout(function(){document.body.background = "";} , 500);
             break;
         case "rp":
@@ -71,17 +71,17 @@ function game(userChoice){
 
 function main(){
 rock_div.addEventListener('click', function(){
-    document.getElementById("x").src="images/rock1.png";
+    document.getElementById("x").src="rock1.png";
     game("r");
 })
 
 paper_div.addEventListener('click', function(){
-    document.getElementById("x").src="images/paper1.png";
+    document.getElementById("x").src="paper1.png";
     game("p");
 })
 
 scissor_div.addEventListener('click', function(){
-    document.getElementById("x").src="images/scissor1.png";
+    document.getElementById("x").src="scissor1.png";
     game("s");
 })
     
@@ -90,8 +90,8 @@ reset_div.addEventListener('click', function(){
     compScore=0;
     userScore_span.innerHTML=userScore;
     compScore_span.innerHTML=compScore;
-    document.getElementById("x").src="images/white.jpg";
-    document.getElementById("y").src="images/white.jpg";
+    document.getElementById("x").src="white.jpg";
+    document.getElementById("y").src="white.jpg";
     result_div.innerHTML = "";
 })  
 }
